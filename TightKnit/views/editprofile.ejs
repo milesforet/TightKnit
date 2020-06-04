@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ccffcc;">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/group">Group</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/settings">Settings</a>
+                </li>
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/logout">Log-Out</a>
+                  </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+
+            <div style="padding-top: 30px;" class="row">
+                <div class="col-md-6 text-center">
+                    <img src="<%= pfp %>" height="275" width="275"/>
+      
+                    <form action="/newpfp" method="post" enctype="multipart/form-data">
+                        <label for="img">Select image:</label>
+                        <input type="file" name="img"><br>
+                        <input type="submit" class="btn" style="background-color: rgb(80, 80, 80); color: white;">
+                    </form>
+                </div>
+            
+                <div class="col-md-6 text-center" style="padding-top: 30px;">
+      
+                    <form action="/updateProfile" method="post">
+                        <h3>First Name:</h3>
+                        <input type="text" name="fName" required value="<%= firstName %>""><br>
+                        <h3>Last Name:</h3>
+                        <input type="text" name="lName" value="<%= lastName %>" required><br>
+                        <h3>Email:</h3>
+                        <input type="email" name="email" value="<%= email %>" required><br>
+                        <h3>Bio:</h3>
+                        <textarea name="bio" required><%= bio %></textarea><br>
+                        <input type="submit" class="btn" style="background-color: rgb(80, 80, 80); color: white;" value="Save Changes">
+                        <a href="/profile" class="btn" style="background-color: rgb(80, 80, 80); color: white;">Cancel</a>
+                    </form>
+                
+                </div>
+            </div>
+
+
+    </body>
+</html>

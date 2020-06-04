@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <meta charset="utf-8">
+
+    <head>
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    
+    
+    
+    <div class="text-center container-fluid pb-3" style="background-color: #ccffcc;">
+        <div class="row">
+            <div class="col-md-4">
+                <br><br>
+                <h2 class="">Tight-Knit</h3>
+            </div>
+            <div class="col-md-5"></div>
+            <div class="col-md-3">
+                <div class="form-group"></div>
+                    <form name="login_form" method="POST" action="/login">
+                        <input type="email" class="form-control" placeholder="Email" name="username" required>
+                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                        <br>
+                        <input type="submit" class="form-control" style="background-color: #0d2157; color:#ffffff" value="Log-In">
+                    </form>  
+                
+                     
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 pt-5 text-center">
+                <h3>Build Small, Tight-Knit Communities!</h2>
+                <br>
+                <h4 style="text-align:left">MEET with people of similar interests!</h4>
+                <h4 style="text-align:left">CONNECT with a small community!</h4>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-3 pt-5 text-center">
+                <h4 style=>It's Easy! Sign up here!</h4>
+                <form method="POST" action="/register">
+                    <br>
+                    <input type="text" class="form-control" name="register_first_name" placeholder="First Name" required>
+                    <br>
+                    <input type="text" class="form-control" name="register_last_name" placeholder="Last Name" required>
+                    <br>
+                    <input type="email" class="form-control" name="username" placeholder="Email" required>
+                    <br>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    <br>
+                    <input type="submit" class="form-control" style="background-color: #0d2157; color:#ffffff" value="Sign-Up">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    
+</html>

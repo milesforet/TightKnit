@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <meta charset="utf-8">
+
+    <head>
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <div class="text-center container-fluid pb-3" style="background-color: #ccffcc;">
+        <div class="row">
+            <div class="col-md-4">
+                <br><br>
+                <h2>Tight-Knit</h2>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <br><br>
+                <h2>Join a Group!</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-4">
+        <div class="row text-center">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h3>Select a Category!</h3>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center form-group">
+                <form id = "group_title" method="POST" action="/regroup">
+                    <select class="form-control" name="group">
+                        <option>Uncategorized</option>
+                        <option>Xbox</option>
+                        <option>Nintendo</option>
+                        <option>Playstation</option>
+                        <option>PC Gaming</option>
+                        <option>Reading</option>
+                        <option>Movies</option>
+                        <option>Chemistry</option>
+                        <option>Motorsports</option>
+                        <option>Golf</option>
+                        <option>Football</option>
+                        <option>Soccer</option>
+                        <option>Baseball</option>
+                        <option>Cooking</option>
+                        <option>Camping</option>
+                        <option>Fitness</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="Join Group!" class="form-control" style="background-color: #0d2157; color:#ffffff">
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+</html>

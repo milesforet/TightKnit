@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <Title>Home</Title>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ccffcc;">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/group">Group</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/settings">Settings</a>
+                </li>
+                <li class="nav-item" style="padding-left: 20px; padding-right: 20px;">
+                    <a class="nav-link" href="/logout">Log-Out</a>
+                  </li>
+            </ul>
+        </nav>
+
+        <main>
+                <div class="container text-center" style="max-width: 50%"> 
+                    <div>
+                        <form action="/submitpost" method="POST">                            
+                            <h3>What's on your mind?</h3>
+                            <textarea class="form-control" id="name" name="addComment" rows='5' required></textarea>
+                            <input type="submit" class="form-control" style="background-color: #0d2157; color:#ffffff" value="Post">
+                        </form>
+                    </div>
+                </div>   
+                 
+                <% if(posts[0].PostID) {%>
+                    <% posts.forEach((post)=>{ %>
+                    <br>
+                    <div class="container" style="max-width: 60%">
+                        <div class="border rounded" style="background-color: #FFFAFA">
+                            <div class="p-2 row">
+                                <div class="col-md-2">
+                                    <img class="rounded-circle" style="max-width: 100%" src="<%=post.ProfilePicture%>">
+                                </div>
+                                <div class="col-md-10">
+                                    <h4><%=post.FullName %></h4>
+                                    <p>
+                                        <%= post.PostContent %>
+                                    </p>
+                                    <a href="/comment/<%=post.PostID%>">Comments</a>
+                                    <br>
+                                    <%if (post.UserID == user.UserID || user.AdministratorFlag == 1) { %>
+                                        <a href="/deletepost/<%=post.PostID%>">Delete</a>
+                                    <% } %>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <% }) %>
+                <%} %>
+            
+                        
+        </main>
+    </body>
+</html>

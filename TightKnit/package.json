@@ -13,7 +13,7 @@
     "mysql": "^2.18.1",
     "node-pre-gyp": "^0.14.0",
     "nodemon": "^2.0.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "req-flash": "0.0.3",
     "util.promisify": "^1.0.1"
   },
